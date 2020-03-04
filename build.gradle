@@ -1,0 +1,25 @@
+plugins {
+  id 'java'
+}
+
+group 'org.gaponec'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+  mavenCentral()
+}
+
+ext {
+  springVersion = '2.2.2.RELEASE'
+  lombokVersion = '1.18.12'
+}
+
+dependencies {
+  implementation "org.springframework.boot:spring-boot-starter-web:${springVersion}"
+  implementation "org.springframework.boot:spring-boot-starter-data-jpa:${springVersion}"
+
+  compileOnly "org.projectlombok:lombok:${lombokVersion}"
+  annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+}
